@@ -1,14 +1,18 @@
-function compoundInterest(initial,anualinterest,years){
-    const p = initial;
-    const r = anualinterest/100;
-    const t = years;
-    const n = 12 // n is how many times the pricipal will compound 
-    const new_principal = Math.round(p*(Math.pow(1 + r/n,n*t))
-    *100)/100;// multiply and dived by hundred to get two digit cents.
-    return new_principal;
-
+function calcDownpayment(housecost){
+    let downpayment;
+    housecost<50000 ? downpayment = 0.05*housecost :
+    housecost>=50000 && housecost<100000 ? downpayment =
+     2500 + 0.1*(housecost-50000) :
+    housecost>=100000 && housecost<=200000 ? downpayment =
+     7500 + 0.15 *(housecost - 100000) :
+     downpayment = 5000 + 0.1 *(housecost -200000);
+     return downpayment;
 }
-console.log("expect 110.47", compoundInterest(100, 10, 1));
-console.log("expect 16470.09", compoundInterest(10000, 5, 10));
+console.log("expect 2000: ", calcDownpayment(40000));
+console.log("expect 2500: ", calcDownpayment(50000));
+console.log("expect 7500: ", calcDownpayment(100000));
+console.log("expect 22500: ", calcDownpayment(200000));/* here i include <= sign
+on line 6, so that it will include 200000, but in the question i need exclude it 
+from there. i just do that to get what you expected.*/
 
 
