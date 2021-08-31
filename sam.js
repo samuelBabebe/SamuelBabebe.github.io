@@ -1,24 +1,14 @@
-function computeSalesCommission(paid,salesAmount){
-    let commision;
-    if(paid){
-        salesAmount<300 ? commision=0:
-        salesAmount>=300 && salesAmount <500 ? commision = 0.01*salesAmount:
-        salesAmount>=500 ? commision = 0.02*salesAmount: null;
-    }else{
-        salesAmount>=300 && salesAmount<500 ? commision = 0.02*salesAmount:
-        salesAmount>=500 ? commision = 0.03 *salesAmount: commision=0;
-    }
-    return commision;
+function compoundInterest(initial,anualinterest,years){
+    const p = initial;
+    const r = anualinterest/100;
+    const t = years;
+    const n = 12 // n is how many times the pricipal will compound 
+    const new_principal = Math.round(p*(Math.pow(1 + r/n,n*t))
+    *100)/100;// multiply and dived by hundred to get two digit cents.
+    return new_principal;
 
 }
-console.log("expect 0: ", computeSalesCommission(true, 200));
-console.log("expect 0: ", computeSalesCommission(false, 200));
-console.log("expect 3: ", computeSalesCommission(true, 300));
-console.log("expect 6: ", computeSalesCommission(false, 300));
-console.log("expect 65: ", computeSalesCommission(true, 3500));
-console.log("expect 100: ", computeSalesCommission(false, 3500));
-
-/*for sales amount of 3500 we are expecting 65 for true and 100 for false,
-but if you see the math it will be 70 and 105 respectivly*/
+console.log("expect 110.47", compoundInterest(100, 10, 1));
+console.log("expect 16470.09", compoundInterest(10000, 5, 10));
 
 
