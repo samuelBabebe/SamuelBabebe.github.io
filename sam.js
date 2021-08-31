@@ -1,21 +1,10 @@
-function sumdigts(input){
-    let sum = 0;
-    while(input){
-        sum+=input %10;
-        input = Math.floor(input/ 10);
-    }
-    return sum;
+function convertFahrenheit (fhartemp){
+    let celtemp = Math.round((fhartemp -32) *(5/9) *10000)/10000;
+    return celtemp;
 }
-function multidigts(input){
-    let multi = 1;
-    while(input){
-        multi*= input%10;
-        input = Math.floor(input/10);
-    }
-    return multi;
-}
-console.log(sumdigts(1234),multidigts(1234));
-console.log(sumdigts(102),multidigts(102));
-console.log(sumdigts(8),multidigts(8));
+console.log("expect 0: ", convertFahrenheit (32));
+console.log("expect -17.7778: ", convertFahrenheit (0));
+console.log("expect 100: ", convertFahrenheit (212));
+console.log("expect 37.7778: ", convertFahrenheit (100));
 
 
