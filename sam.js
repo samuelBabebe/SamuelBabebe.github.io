@@ -1,10 +1,8 @@
-function convertFahrenheit (fhartemp){
-    let celtemp = Math.round((fhartemp -32) *(5/9) *10000)/10000;
-    return celtemp;
+function calcDistance(x1,y1,x2,y2){
+    let distance = Math.round(Math.sqrt(Math.pow((x2-x1),2) +
+     Math.pow((y2-y1),2))*10)/10;
+    return distance;
 }
-console.log("expect 0: ", convertFahrenheit (32));
-console.log("expect -17.7778: ", convertFahrenheit (0));
-console.log("expect 100: ", convertFahrenheit (212));
-console.log("expect 37.7778: ", convertFahrenheit (100));
-
+console.log("expect 5 : ", calcDistance (0, 0, 5, 5));
+//here we were expecting to get 5 but when we calculate it, it is 7.1(rounded).
 
