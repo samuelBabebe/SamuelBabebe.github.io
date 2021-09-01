@@ -6,3 +6,4 @@ function calcDistance(x1,y1,x2,y2){
 console.log("expect 5 : ", calcDistance (0, 0, 5, 5));
 //here we were expecting to get 5 but when we calculate it, it is 7.1(rounded).
 
+SafeArray;
