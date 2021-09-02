@@ -1,19 +1,7 @@
 "use strict";
 
-/**
- * this function accept any integer number and add them.
- * @param {number} input the number to add them.
- * @returns {number} the sum of numbers
- */
-function sumdigts(input){
-    let sum = 0;
-    while(input){
-        sum+=input %10;
-        input = Math.floor(input/ 10);
-    }
-    return sum;
-}
-
+const functionmodule = ("./sam.js")
+const sumdigts = functionmodule.sumdigts;
 const assert = require("assert");
 
 describe("this function accept integer and add them", function(){
@@ -27,3 +15,4 @@ describe("this function accept integer and add them", function(){
         assert.strictEqual(sumdigts(8),8);
     });
 });
+
