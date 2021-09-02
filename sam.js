@@ -1,26 +1,38 @@
 "use strict";
-module.exports = {computeSalesCommission};
 /**
- * this function accept if the sales man paid or not and the sales amount then returs
- * the commision he used to paid.
- * @param {Boolean} paid asks if sales person get paid or not.
- * @param {number} salesAmount the amount person sales.
- * @returns {number} return commision amount.
+ * this function calculate the down payment of house based on its 
+ * cost.
+ * @param {number} housecost the cost of house. 
+ * @returns {number} it returns the down payment.
  */
-function computeSalesCommission(paid,salesAmount){
-    let commision;
-    if(paid){
-        salesAmount<300 ? commision=0:
-        salesAmount>=300 && salesAmount <500 ? commision = 0.01*salesAmount:
-        salesAmount>=500 ? commision = 0.02*salesAmount: null;
-    }else{
-        salesAmount>=300 && salesAmount<500 ? commision = 0.02*salesAmount:
-        salesAmount>=500 ? commision = 0.03 *salesAmount: commision=0;
-    }
-    return commision;
 
+
+function calcDownpayment(housecost){
+    let downpayment;
+    housecost<50000 ? downpayment = 0.05*housecost :
+    housecost>=50000 && housecost<100000 ? downpayment =
+     2500 + 0.1*(housecost-50000) :
+    housecost>=100000 && housecost<=200000 ? downpayment =
+     7500 + 0.15 *(housecost - 100000) :
+     downpayment = 5000 + 0.1 *(housecost -200000);
+     return downpayment;
 }
-
+const assert = require("assert");
+describe("cheak the house price and",function(){
+    it(" tests house cost is 40000", function(){
+        assert.strictEqual(calcDownpayment(40000), 2000);
+    });
+    it(" tests house cost is 50000", function(){
+        assert.strictEqual(calcDownpayment(50000), 2500);
+    });
+    it(" tests house cost is 100000", function(){
+        assert.strictEqual(calcDownpayment(100000), 7500);
+    });
+    it(" tests house cost is 200000", function(){
+        assert.strictEqual(calcDownpayment(200000), 22500);
+    });
+    
+});
 
 
 
