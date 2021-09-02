@@ -1,31 +1,23 @@
-
 "use strict";
-module.exports = {isVowel}
-/*eslint-disable*/
-/* global assert isVowel*/
-/* isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false
-otherwise. */
-
+module.exports = {computeSalesCommission};
 /**
- * this function will accept a letter and decide if it
- * is vowel or not
  * 
- * @param {string} input the letter
- * @returns {Boolean} the output
+ * @param {Boolean} paid asks if sales person get paid or not.
+ * @param {number} salesAmount the amount person sales.
+ * @returns {number} return commision amount.
  */
-
-
-function isVowel(input){
-    
-    let vowel = ["a","i","e","o","u"];
-    for(let i = 0; i < vowel.length; i++){
-        if(input ===vowel[i]){
-            return true;
-        }
-       
+function computeSalesCommission(paid,salesAmount){
+    let commision;
+    if(paid){
+        salesAmount<300 ? commision=0:
+        salesAmount>=300 && salesAmount <500 ? commision = 0.01*salesAmount:
+        salesAmount>=500 ? commision = 0.02*salesAmount: null;
+    }else{
+        salesAmount>=300 && salesAmount<500 ? commision = 0.02*salesAmount:
+        salesAmount>=500 ? commision = 0.03 *salesAmount: commision=0;
     }
-    return false;
-}
+    return commision;
 
+}
 
 

@@ -1,28 +1,24 @@
-"use strict"
+"use strict";
+const functionmodule = require("./learn.js");
+const computeSalesCommission = functionmodule.computeSalesCommission;
 const assert = require("assert");
-
-const functionmodule = require("./sam.js");
-const isVowel = functionmodule.isVowel;
-describe("cheaks if the input is vowel or not", function () {
-    it("a is vowel", function () {
-    assert.equal(isVowel("a"), true);
+describe("test of ComputSalesCommission", function(){
+    it("tests salaried and 200 sales", function(){
+    assert.strictEqual(computeSalesCommission(true, 200), 0);
     });
-    it("e is vowel", function () {
-    assert.equal(isVowel("e"), true);
+    it("tests not salaried and 200 sales", function(){
+    assert.strictEqual(computeSalesCommission(false, 200), 0);
     });
-    it("i is vowel", function () {
-    assert.equal(isVowel("i"), true);
+    it("tests salaried and 300 sales", function(){
+    assert.strictEqual(computeSalesCommission(true, 300), 3);
     });
-    it("o is vowel", function () {
-    assert.equal(isVowel("o"), true);
+    it("tests not salaried and 300 sales", function(){
+    assert.strictEqual(computeSalesCommission(false, 300), 6);
     });
-    it("u is vowel", function () {
-    assert.equal(isVowel("u"), true);
+    it("tests salaried and 3500 sales", function(){
+    assert.strictEqual(computeSalesCommission(true, 3500), 70);
     });
-    it("z is not vowel", function () {
-    assert.equal(isVowel("z"), false);
-    });
-    it("5 is not vowel", function () {
-    assert.equal(isVowel("5"), false);
+    it("tests not salaried and 3500 sales", function(){
+    assert.strictEqual(computeSalesCommission(false, 3500), 105);
     });
    });
