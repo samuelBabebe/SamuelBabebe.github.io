@@ -1,18 +1,20 @@
 "use strict";
-module.exports = {sumdigts};
+module.exports = {multidigts};
 /**
- * this function accept any integer number and add them.
- * @param {number} input the number to add them.
- * @returns {number} the sum of numbers
+ * this function accept any integer number and multiply them.
+ * @param {number} input the number to multiply them.
+ * @returns {number} the multiplication of numbers
  */
-function sumdigts(input){
-    let sum = 0;
+
+ function multidigts(input){
+    let multi = 1;
     while(input){
-        sum+=input %10;
-        input = Math.floor(input/ 10);
+        multi*= input%10;
+        input = Math.floor(input/10);
     }
-    return sum;
+    return multi;
 }
+
 
 
 

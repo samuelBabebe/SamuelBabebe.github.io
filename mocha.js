@@ -1,18 +1,18 @@
 "use strict";
 
-const functionmodule = ("./sam.js")
-const sumdigts = functionmodule.sumdigts;
+const functionmodule = require("./sam.js");
+const multidigts = functionmodule.multidigts;
 const assert = require("assert");
 
-describe("this function accept integer and add them", function(){
-    it("add 1234", function(){
-        assert.strictEqual(sumdigts(1234),10);
+describe("this function accept integer and multiply them", function(){
+    it("multiply 1234", function(){
+        assert.strictEqual(multidigts(1234),24);
     });
-    it("add 105", function(){
-        assert.strictEqual(sumdigts(105),6);
+    it("multiply 105", function(){
+        assert.strictEqual(multidigts(105),0);
     });
-    it("add 8", function(){
-        assert.strictEqual(sumdigts(8),8);
+    it("multiply 8", function(){
+        assert.strictEqual(multidigts(8),8);
     });
 });
 
