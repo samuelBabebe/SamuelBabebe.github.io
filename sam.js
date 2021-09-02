@@ -43,8 +43,13 @@ describe("test of ComputSalesCommission", function(){
     assert.strictEqual(computeSalesCommission(false, 3500), 105);
     });
    });
-
-
-
+describe("this function tests ComputSalesCommission", function(){
+    it("tests salaried and 400 sales",function(){
+    assert.strictEqual(computeSalesCommission(true,400),4);
+       });
+    it("tests not salried and 200 sales",function(){
+    assert.strictEqual(computeSalesCommission(false,200),0);
+       });
+   });
 
 
