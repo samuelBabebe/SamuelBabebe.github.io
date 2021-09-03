@@ -67,7 +67,7 @@ describe("sum and multiply", function () {
 
 /*
 3.	Write a function findLongestWord() that takes an array of words and returns the length of the longest one. 
-*/
+
 describe("findLongestWord", function () {
     it("tests longest", function () {
         assert.strictEqual(findLongestWord(["this", "is", "a", "test", "longest"]), 7);
@@ -127,7 +127,8 @@ describe("score exam", function () {
     });
 });
 
-/* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows: */
+/* 6. Write a function that takes two integers as inputs and returns a 2-dimensional
+ array containing sequential numbers across each row as follows: */
 describe("generate array", function () {
     const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
     const expected23 = [ [1, 2, 3], [4, 5, 6]];
