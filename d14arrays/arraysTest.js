@@ -65,8 +65,8 @@ describe("sum and multiply", function () {
 });
 
 
-/*
-3.	Write a function findLongestWord() that takes an array of words and returns the length of the longest one. 
+
+3.	//Write a function findLongestWord() that takes an array of words and returns the length of the longest one. 
 
 describe("findLongestWord", function () {
     it("tests longest", function () {
