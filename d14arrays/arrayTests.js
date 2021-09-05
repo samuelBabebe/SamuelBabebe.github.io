@@ -8,6 +8,12 @@ const myExports = require("./arrays.js");  //with node need the name of your fil
 const maxOfThree = myExports.maxOfThree;  //do this for all of the functions used in the Mocha tests
 const multiply = myExports.multiply;
 const sum = myExports.sum;
+const findLongestWord = myExports.findLongestWord;
+const reverseArray  = myExports.reverseArray;
+const reverseArrayInPlace = myExports.reverseArrayInPlace;
+const scoreExams = myExports.scoreExams;
+const generateArray = myExports.scoreExams;
+
 
 
 /* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams generateArray */
@@ -50,7 +56,8 @@ describe("maxOfThree", function () {
 });
 
 /*
-2.	Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10,
+2.	Define a function sum() and a function multiply() that sums and 
+multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10,
  and multiply([1,2,3,4]) should return 24. 
  */
 describe("sum and multiply", function () {
@@ -130,16 +137,16 @@ describe("score exam", function () {
 /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional
  array containing sequential numbers across each row as follows: */
 describe("generate array", function () {
-    const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
-    const expected23 = [ [1, 2, 3], [4, 5, 6]];
-    const expected21 = [ [1], [2]];
+   //const expected33 =  [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    //const expected23 = [ [1, 2, 3], [4, 5, 6]];
+    //const expected21 = [ [1], [2]];
     it("expected33", function () {
-        assert.deepEqual(generateArray(3,3), expected33);
+        assert.deepEqual(generateArray(3,3),[], [ [1, 2, 3], [4, 5, 6], [7, 8, 9]]);
     });
     it("expected23", function () {
-        assert.deepEqual(generateArray(2,3), expected23);
+        assert.deepEqual(generateArray(2,3),[], [ [1, 2, 3], [4, 5, 6]]);
     });
     it("expected21", function () {
-        assert.deepEqual(generateArray(2, 1), expected21);
+        assert.deepEqual(generateArray(2, 1),[], [ [1], [2]]);
     });
 });

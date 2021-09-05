@@ -3,7 +3,8 @@
 /* You need the module.exports when testing in node.  
 Comment it out when you send your file to the browser
 */ 
-module.exports = {maxOfThree, sum, multiply }; /*add all
+module.exports = {maxOfThree, sum, multiply,findLongestWord,
+    reverseArray,reverseArrayInPlace,scoreExams,generateArray }; /*add all
  of your function names here that you need for the node mocha tests*/
 
 /**
@@ -15,7 +16,7 @@ module.exports = {maxOfThree, sum, multiply }; /*add all
  */
 function maxOfThree(a, b, c){ 
     let result;
-    a > b && a > c ? result = a :
+    a >= b && a >= c ? result = a :
     b > a && b > c ? result = b : result = c;
     return result;
 }
@@ -48,18 +49,7 @@ function multiply(arr){
     return tot;
 
 }
-/**
- * this function will compare two values and retern 1,0 or -1
- * @param {number} a the first value
- * @param {number} b the second value
- * @returns {number} returns 1,0 or -1
- */
-function compare(a,b){
-    let result;
-    a > b ? result = 1 :
-    a == b ? result = 0 : result = -1;
-    
-}
+
 /**
  * 
  * @param {array} arr any string value array
@@ -70,8 +60,8 @@ function findLongestWord(arr){
     for(let i = 0; i < arr.length; i++){
         newarr[i] = arr[i].length;
     }
-    newarr.sort(compare())
-    console.log(newarr[arr.length-1]);
+    newarr.sort((a,b) => a-b);
+    return newarr[arr.length-1];
 }
 
  /**
@@ -134,8 +124,8 @@ function generateArray(x,y){
     let arr = [];
     let allarr = [];
     let count = 1;
-    for(let i = 0; i<=x; i++){
-        for(let j = 0; j<=y; j++){
+    for(let i = 0; i<x; i++){
+        for(let j = 0; j<y; j++){
         arr[j]=count;
         count++
         }
