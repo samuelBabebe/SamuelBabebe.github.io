@@ -19,7 +19,7 @@ function addBook(titles,authors,ids){
         newbook[addis] = libraryBooks[addis][count]
     }
 
-    return newbook;
+    document.getElementById("displayArea").innerHTML =  newbook;
 
 }
 
@@ -29,20 +29,23 @@ function addBook(titles,authors,ids){
 function findTitles(){
     let list =libraryBooks.titel;
     list.sort()
-    return list;
+
+    document.getElementById("displayArea").innerHTML =  list;
 }
 //console.log(findtitel());
 
 function finAuthr(){
     let list =libraryBooks.author;
     list.sort()
-    return list;
+    
+    document.getElementById("displayArea").innerHTML = list;
 }
 
 function findbookId(){
     let list =libraryBooks.bookId;
    // list.sort((a,b) => a-b);
-    return list;
+    
+   document.getElementById("displayArea").innerHTML =  list;
 }
 //console.log(findbookId());
 
