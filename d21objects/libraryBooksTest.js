@@ -38,18 +38,18 @@ describe("library", function () {
     });
 
     it("find authors", function () {
-        assert.deepEqual(findAuthors(), authors);
+        assert.deepEqual(finAuthr(), authors);
     });
 
     it("find ids", function () {
-        assert.deepEqual(findIDs(), ids);
+        assert.deepEqual(findbookId(), ids);
     });
 
     it("add book", function () {
         const newBook = {titel: "My New Book", author: "Me Too", bookId: 1144};
         ids.push(1144);
         assert.deepEqual(addBook("My New Book",  "Me Too",  1144), newBook);
-        assert.deepEqual(findIDs(), ids);
+        assert.deepEqual(findbookId(), ids);
     });
 
 });
