@@ -1,4 +1,4 @@
-module.exports = {addBook,findTitles,finAuthr,findbookId}
+//module.exports = {addBook,findTitles,finAuthr,findbookId}
 let libraryBooks = {
     titel : ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"],
     author : ["Bill Gates", "Steve Jobs", "Suzanne Collins"],

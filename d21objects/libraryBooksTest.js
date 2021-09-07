@@ -1,11 +1,12 @@
 "use strict";
 /*  comment out the exports when running in the browser */
-const assert = require("assert");  //always need this with node
-const myExports = require("./app.js");  //with node need the name of your file with your functions here
-const findTitles = myExports.findTitles;  //do this for all of the functions used in the Mocha tests
-const findAuthors = myExports.finAuthr;
-const findIDs = myExports.findbookId;
-const addBook = myExports.addBook;
+//const assert = require("assert");  //always need this with node
+//const myExports = require("./app.js");  //with node need the name of your file with your functions here
+//const findTitles = myExports.findTitles;  //do this for all of the functions used in the Mocha tests
+//const findAuthors = myExports.finAuthr;
+//const findIDs = myExports.findbookId;
+//const addBook = myExports.addBook;
+
 
 
 /* global assert findTitles findAuthors findIDs addBook */
