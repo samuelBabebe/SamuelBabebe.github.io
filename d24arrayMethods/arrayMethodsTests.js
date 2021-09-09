@@ -1,10 +1,12 @@
 "use strict"
+/*
 const assert = require("assert");
 const inport = require("./methods");
 const filterRange = inport.filterRange;
 const filterRangeInPlace = inport.filterRangeInPlace;
 const unique = inport.unique;
 const calculator = inport.calculator;
+*/
 describe("filterRange", function () {
     it("returns the filtered values", function () {
         let arr = [5, 3, 8, 1];

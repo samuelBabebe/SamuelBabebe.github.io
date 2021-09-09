@@ -77,5 +77,5 @@ function unique(arr) {
   
     return result;
   }
-module.exports = {filterRange,filterRangeInPlace,calculator,unique}
+//module.exports = {filterRange,filterRangeInPlace,calculator,unique}
   
