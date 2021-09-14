@@ -1,7 +1,5 @@
 "use strict"
-//const assert = require("assert")
-//const inport = require("./destructure.js")
-//const topSalary = inport.topSalary;
+
 describe("topSalary", function() {
     it("returns top-paid person", function() {
       let salaries = {
