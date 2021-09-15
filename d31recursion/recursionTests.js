@@ -1,11 +1,11 @@
 "use strict"
-
+/*
 const assert = require("assert");
 const input = require("./recursion.js");
 const sumTo = input.sum;
 const factorial = input.factorial;
 const fibonacci = input.fibonachi;
-
+*/
 describe("recursion tests", function () {
     it("tests summing by recursion", function () {
         assert.strictEqual(sumTo(5), 15);

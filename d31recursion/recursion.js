@@ -1,5 +1,5 @@
 "use strict"
-module.exports = {sum,factorial,fibonachi}
+//module.exports = {sum,factorial,fibonachi}
  //let count =0;
  /**
   * 
