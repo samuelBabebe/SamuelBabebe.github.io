@@ -19,9 +19,9 @@ class Account {
 
     withdraw(amount){
         if(amount<0) { 
-           return RangeError("The argument must be between -500 and 500.") 
+          throw  new RangeError("The argument must be between -500 and 500.") 
         }else if(amount>this.balance){
-               return new Error("Insufficient funds")
+              throw new Error("Insufficient funds")
         }else{
                return this.balance-=amount;
         }
@@ -29,7 +29,7 @@ class Account {
      deposit(amount){
         
         if(amount<0) { 
-            return`${RangeError} "Deposit amount has to be greater than zero"` 
+            throw new RangeError ("Deposit amount has to be greater than zero") 
         }else if(this.balance==undefined){
                 return this.balance = 0+amount
         }else{
@@ -103,7 +103,7 @@ class CheckingAccount extends Account{
 
     withdraw(amount){
         if((this.balance-amount)<(-1*this.overdraft)){
-            return console.error(Error,"Insufficient funds, cannot withdraw beyond overdraft limit")
+            throw new Error ("Insufficient funds, cannot withdraw beyond overdraft limit")
         }else{
             return this.balance-=amount;
         }
@@ -124,7 +124,7 @@ class CheckingAccount extends Account{
         }
 }
 
-class bank{
+class Bank{
     constructor(){
      
         this._accounts = [];
@@ -191,5 +191,5 @@ class bank{
 
 }
 
-//module.exports ={Account,SavingsAccount, CheckingAccount,bank }
+//module.exports ={Account,SavingsAccount, CheckingAccount,Bank }
 

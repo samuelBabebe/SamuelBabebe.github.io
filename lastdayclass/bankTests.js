@@ -1,14 +1,15 @@
 "use strict";
- /*
+ 
 
-
+/*
 const assert = require("assert")
 const lol = require("./savingsaccount")
 const Account = lol.Account;
 const SavingsAccount = lol.SavingsAccount;
 const CheckingAccount = lol.CheckingAccount
-const Bank = lol.bank
- */
+const Bank = lol.Bank
+*/
+ 
 describe("Account class", () => {
     let account = undefined;
     describe("constructor(number)", () => {
