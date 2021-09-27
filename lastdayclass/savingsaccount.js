@@ -1,6 +1,6 @@
 "use strict"
 
-//const { error } = require("console");
+
 
 class Account {
     constructor(account,balance){
