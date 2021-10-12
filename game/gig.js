@@ -23,22 +23,22 @@ rock_id.addEventListener('click', function () {
 
 function game(userchoice){
     
-    let fuck =computer();
-    switch( userchoice + fuck){
+    let lol =computer();
+    switch( userchoice + lol){
         case "sissorpapper":
         case "rocksissor":
         case "papperrock":
-            win(userchoice,fuck);
+            win(userchoice,lol);
             break;
         case "sissorsissor":
         case "papperpapper":
         case "rockrock":
-            draw(userchoice,fuck);
+            draw(userchoice,lol);
             break;
         case "pappersissor":
         case "sissorrock":
         case "rockpapper":
-            lose(userchoice,fuck);
+            lose(userchoice,lol);
             break;
     }
     
@@ -49,25 +49,25 @@ function computer(){
     let find= Math.floor(Math.random()*3);
     return choose[find];
 }
-function win(userchoice,fuck){
+function win(userchoice,lol){
     user_score.innerHTML++
     
     result_teller.innerHTML = `user choose  ${userchoice}  comp choose 
-    ${fuck}  you win`
+    ${lol}  you win`
     
 
 }
-function lose(userchoice,fuck){
+function lose(userchoice,lol){
     comp_score.innerHTML++
     
-    result_teller.innerHTML =  `user choose  ${userchoice}  comp choose 
-    ${fuck}  you loose`
+    result_teller.innerHTML =  `<sup>user<sup> choose  ${userchoice}  <sup>comp<sup> choose 
+    ${lol}  you loose`
 
 }
-function draw(userchoice,fuck){
+function draw(userchoice,lol){
 
-    result_teller.innerHTML =  `user choose  ${userchoice}  comp choose 
-    ${fuck}  draw`
+    result_teller.innerHTML =  `<sup>user<sup> choose  ${userchoice}  <sup>comp<sup> choose 
+    ${lol}  draw`
 
 }
 
