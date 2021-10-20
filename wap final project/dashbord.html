@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Abebe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <link rel="import" href="http://127.0.0.1:5500/contactme.html">
+</head>
+<body>
+    <!-- navbar -->
+   
+   <nav class="navbar navbar-expand-md navbar-light "style="background-color: grey;">
+        
+    <div class="container-sm">
+
+    <a href="mypage.html" class="navbar-brand">Samuel Abebe</a>
+    <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+     
+        
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="mypage.html" class="nav-link  text-white " >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="About.html" class="nav-link text-white " >AboutMe</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link text-white" >Courses</a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a href="projects.html" class="nav-link text-white  " >projects</a>
+                        
+                    
+                </li>
+                <li class="nav-item">
+                    <a href="contactme.html" class="nav-link text-white" >contactMe</a>
+                </li>
+                <li class="nav-item">
+                    <a href="myskills.html" class="nav-link text-white btn disabled bg-dark" >dashboard</a>
+                </li>
+            </ul>
+        
+            
+        </div>
+    </div>
+</nav>
+<section class="p-5 bg-dark text-light ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md mb-4">
+                <h2>courses</h2>
+                <div class="form-group ">
+                    <select class="form-control my-4" id="courseselection">
+
+                       
+
+
+                    </select>
+                </div>
+               
+                    <div class="d-flex">
+                        <div class="">
+                            <a type="button" class="btn btn-outline-light mx-3 mb-3" id="admincourseedit" >Edit</a>
+                        </div>
+                        <div class="">
+                            <a type="button" class="btn btn-outline-light mx-3 mb-3" id="admincourseremove" >Remove</a>
+                        </div>
+                    </div>
+                <div>
+                    <lable for="admincourseinput" class="lable-form">course name</lable>
+                <input  class="form-control mb-5" type="text" id="admincourseinput" value ="">
+                <lable for="coursedateinput" class="lable-form">date</lable>
+                <input class="form-control mb-5" type="text" id="coursedateinput">
+                <lable for="courselink" class="lable-form">course link</lable>
+                <input class="form-control mb-5" type="text" id="courselink">
+                <lable for="admincoursedis" class="lable-form">course discription</lable>
+                <textarea class="form-control" type="textarea" id="admincoursedis" rows="4"></textarea>
+                <a type="button" class="btn btn-outline-light mt-4 mx-3" id="courseadd">add</a>
+                <a type="button" class="btn btn-outline-light mt-4 mx-3" id="coursechange">update</a>
+                
+                </div>
+            </div>
+            <div class="col-md mb-4">
+                <h2>projects</h2>
+                <!-- <ul class="" id="coursesid">
+                    <li></li>
+                </ul> -->
+                <div class="form-group ">
+                    <select class="form-control my-4" id="projectselection">
+
+                        
+
+
+                    </select>
+                   
+               
+                </div>
+                    <div class="d-flex">
+                        <div class="">
+                            <a type="button" class="btn btn-outline-light mx-3 mb-3" id="adminprojectedit" >Edit</a>
+                        </div>
+                        <div class="">
+                            <a type="button" class="btn btn-outline-light mx-3 mb-3" id="adminprojectemove" >Remove</a>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <lable for="adminprojectinput" class="lable-form">project name</lable>
+                    <input  class="form-control mb-5" type="text" id="adminprojectinput">
+                    <lable for="coursedateinput" class="lable-form">date</lable>
+                    <input class="form-control mb-5" type="text" id="projectdateinput">
+                    <lable for="projectdifficulty" class="lable-form">dificulty</lable>
+                    <input class="form-control mb-5" type="text" id="projectdifficulty" >
+                    <lable for="projectlink" class="lable-form">project link</lable>
+                    <input class="form-control mb-5" type="text" id="projectlink">
+                    <lable for="adminprojectdis" class="lable-form">project discription</lable>
+                    <textarea class="form-control" type="textarea" id="adminprojectdis" rows="4"></textarea>
+                    <a type="button" class="btn btn-outline-light mt-4 mx-3" id="projectadd">add</a>
+                    <a type="button" class="btn btn-outline-light mt-4 mx-3" id="projectchange">update</a>
+                    
+                    </div>
+            </div>
+            </div>
+            <div class=" table-responsive table-bordered   pt-5">
+                
+                <h2>users</h2>
+               <table class="table text-light " id="usertable">
+                    <tr>
+                        <th>username</th>
+                        <th>email</th>
+                        <th>phone</th>
+                        <th>message</th>
+                        
+
+                    </tr>  
+                    <tr>
+                        <td>sam</td>
+                        <td>email</td>
+                        <td>phone</td>
+                        <td>lol</td>  
+                    </tr>                  
+
+               </table>
+               
+            </div>
+    </div>
+</section>
+    <script src="dashboard.js"></script>
+    <!-- <script src="dashboard.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
+</body>
+</html>
