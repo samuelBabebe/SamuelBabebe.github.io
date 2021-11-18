@@ -12,12 +12,12 @@ window.onload = function(){
 
         const{from}= rxjs
         const{filter,map}=rxjs.operators
-        let total_users = from(fetch("http://jsonplaceholder.typicode.com/users").then(response=>response.json()))
+        let total_users = from(fetch("https://jsonplaceholder.typicode.com/users").then(response=>response.json()))
        
         //console.log(current_location)
         total_users.subscribe(vals=>{
             from(vals).pipe(filter(vals=>vals.id==user_id_input.value)).subscribe(val=>{
-                let current_location = from(fetch(`http://www.mapquestapi.com/geocoding/v1/reverse?key=IDr53bvFh1wXBMfIQEwvqWLj1vgY62jh&location=${val.address.geo.lat},${val.address.geo.lng}&includeRoadMetadata=true&includeNearestIntersection=true`).then(response=>response.json()))
+                let current_location = from(fetch(`https://www.mapquestapi.com/geocoding/v1/reverse?key=IDr53bvFh1wXBMfIQEwvqWLj1vgY62jh&location=${val.address.geo.lat},${val.address.geo.lng}&includeRoadMetadata=true&includeNearestIntersection=true`).then(response=>response.json()))
                 current_location.subscribe(location=>{
                     let curent_loc =location.results[0].locations[0].street
                     // console.log(curent_loc)
@@ -35,7 +35,7 @@ window.onload = function(){
                 let get_posts = document.getElementById("get_posts")
        
         get_posts.addEventListener("click",()=>{
-            let posts = from(fetch(`http://jsonplaceholder.typicode.com/posts?userId=${val.id}`).then(response=>response.json()))
+            let posts = from(fetch(`https://jsonplaceholder.typicode.com/posts?userId=${val.id}`).then(response=>response.json()))
                 
                 posts.subscribe(result=>{
                      
@@ -72,7 +72,7 @@ window.onload = function(){
                         //console.log()
                         commentbtn.addEventListener("click",function(){
                             //let sam =this.id
-                            let coment_fetch = from(fetch(`http://jsonplaceholder.typicode.com/comments?postId=${index+1}`).then(response=>response.json()))
+                            let coment_fetch = from(fetch(`https://jsonplaceholder.typicode.com/comments?postId=${index+1}`).then(response=>response.json()))
                             coment_fetch.subscribe(fetch_result =>{
                                 fetch_result.map(item=>{
     
